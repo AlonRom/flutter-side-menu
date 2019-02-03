@@ -90,7 +90,7 @@ class MainMenuState extends State<MainMenu> {
         centerTitle: true,
       ),
       drawer: new Drawer(
-        child: new Column(
+        child: new ListView(
           children: <Widget>[
             new Container(
                 child: new ListTile(
@@ -122,15 +122,24 @@ class MainMenuState extends State<MainMenu> {
 
   List<MenuItem> createMenuItems() {
     final menuItems = [
-      new MenuItem("Dashboard", 'assets/images/dashboard.png', Colors.black, () => new Dashboard()),
-      new MenuItem("Cows", 'assets/images/cow.png', Colors.green, () => new Cows()),
-      new MenuItem("Doves", 'assets/images/dove.png', Colors.yellow, () => new Doves()),
-      new MenuItem("Dogs", 'assets/images/dog.png', Colors.brown, () => new Dogs()),
-      new MenuItem("Dolphins", 'assets/images/dolphin.png', Colors.orange, () => new Dolphins()),
-      new MenuItem("Bugs", 'assets/images/bug.png', Colors.red, () => new Bugs()),
-      new MenuItem("Cats", 'assets/images/cat.png', Colors.purple, () => new Cats()),
-      new MenuItem("Fishes", 'assets/images/fish.png', Colors.blue, () => new Fishes()),
-      new MenuItem("Elephants", 'assets/images/elephant.png', Colors.grey, () => new Elephants()),
+      new MenuItem("Dashboard", 'assets/images/dashboard.png', Colors.black,
+          () => new Dashboard()),
+      new MenuItem(
+          "Cows", 'assets/images/cow.png', Colors.green, () => new Cows()),
+      new MenuItem(
+          "Doves", 'assets/images/dove.png', Colors.yellow, () => new Doves()),
+      new MenuItem(
+          "Dogs", 'assets/images/dog.png', Colors.brown, () => new Dogs()),
+      new MenuItem("Dolphins", 'assets/images/dolphin.png', Colors.orange,
+          () => new Dolphins()),
+      new MenuItem(
+          "Bugs", 'assets/images/bug.png', Colors.red, () => new Bugs()),
+      new MenuItem(
+          "Cats", 'assets/images/cat.png', Colors.purple, () => new Cats()),
+      new MenuItem(
+          "Fishes", 'assets/images/fish.png', Colors.blue, () => new Fishes()),
+      new MenuItem("Elephants", 'assets/images/elephant.png', Colors.grey,
+          () => new Elephants()),
     ];
     return menuItems;
   }
